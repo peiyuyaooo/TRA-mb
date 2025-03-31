@@ -5,7 +5,19 @@
     font-family: 'PingFang SC', sans-serif;
 }
 
+:root {
+    --Primary-01: #00529D; /* Primary color */
+    --Text-Default: #4B4948; /* Default text color */
+    --Background-Light: #FFFFFF; /* Light background */
+    --Border-Light: #E9F5FF; /* Light border */
+}
+
 .header-1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
     background: #002F59;
     display: flex;
     height: 80px;
@@ -59,6 +71,11 @@
 }
 
 .header-2{
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     height: 80px;
     padding: var(--spacing-3xl, 24px);
@@ -89,17 +106,16 @@
 }
 
 
-.hero-section{
-    width: 1440px;
-    height: 500px;
-    position: relative;
-    display: inline-flex;
-    padding: 8px 40px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 80px;
-    
+
+.hero-image-container {
+    background-image: url('/assets/image/dk/hero-image.png'); 
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
 }
+
 
 .hero-section-content h1{
     color: var(--Primary-01, #00529D);
@@ -120,6 +136,3 @@
     line-height: 150%;
 }
 
-.hero-image-container{
-    background: no-repeat right center;
-}
