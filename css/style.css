@@ -6,10 +6,17 @@
 }
 
 :root {
-    --Primary-01: #00529D; /* Primary color */
-    --Text-Default: #4B4948; /* Default text color */
-    --Background-Light: #FFFFFF; /* Light background */
-    --Border-Light: #E9F5FF; /* Light border */
+    --Primary-00: #002F59;
+    --Primary-01: #00529D; 
+    --Primary-02: #2587E1; 
+    --Primary-04: #AAD6FF; 
+    --Primary-05: #E9F5FF;
+    --Text-Gray800: #252B37; 
+    --TagText-Gray600: #535862;
+    --Content-Gray500: #717680;  
+    --Border-Light: #E9EAEB; 
+    --Base-White: #FFF;
+
 }
 
 .header-1{
@@ -18,7 +25,7 @@
     left: 0;
     width: 100%;
     z-index: 1001;
-    background: #002F59;
+    background: var(--Primary-00);
     display: flex;
     height: 80px;
     padding: 8px 24px;
@@ -33,7 +40,7 @@
     padding: 20px 24px;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--Base-White);
     list-style: none;
     
 }
@@ -43,7 +50,7 @@
 }
 
 .company-menu ul li a{
-    color: white;
+    color: var(--Base-White);
     text-decoration: none;
 }
 
@@ -56,7 +63,7 @@
 
 .language ul{
     display: flex;
-    color: white;
+    color: var(--Base-White);
     list-style: none;
     align-items: center;
     gap: 8px;
@@ -78,7 +85,7 @@
     z-index: 1000;
     display: flex;
     height: 80px;
-    padding: var(--spacing-3xl, 24px);
+    padding: 24px;
     background: var(--Base-White, #FFF);
     justify-content: center;
     align-items: center;
@@ -101,7 +108,7 @@
     }
 
 .user-menu ul li a{
-    color: #4B4948;
+    color: var(--Text-Gray800);
     text-decoration: none;
 }
 
@@ -134,5 +141,52 @@
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+}
+
+
+.booking-wrapper{}
+
+.annoucement-container{
+    display: flex;
+    overflow: hidden;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10);
+    background: var(--Primary-01, #00529D);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    color: var(--Base-White, #FFF);
+    margin: 64px 60px;
+}
+
+.annoucement-title{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.tab-container{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.tab-item{
+    display: flex;
+    flex-direction: row;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab-item a {
+    text-decoration: none;
+    color: var(--Text-Gray800, #4B4948); 
 }
 
