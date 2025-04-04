@@ -102,6 +102,7 @@ button {
     position: fixed;
     top: 80px;
     left: 0;
+    max-width: 1440px;
     width: 100%;
     z-index: 1000;
     display: flex;
@@ -265,7 +266,7 @@ button {
 }
 
 .booking-form{
-    /* border: 1px solid purple; */
+    border: 1px solid purple;
     
 }
 
@@ -276,7 +277,7 @@ button {
     max-width: 100%;
     overflow: hidden;
     border: 1px solid blue;
-    
+    margin-bottom: 40px;
 
 
 }
@@ -348,11 +349,11 @@ button {
 
 
 
-.btn-container{
+.info-btn-container{
     text-align: center;
 }
 
-.ctaBTN{
+.ticket-ctaBTN{
     color: var(--Primary-02);
     font-size: 16px;
     font-style: normal;
@@ -361,7 +362,7 @@ button {
     text-align: center;
 }
 
-.ctaBTN:hover{
+.ticket-ctaBTN:hover{
     color: var(--Primary-00);
 }
 
@@ -501,6 +502,478 @@ button {
     line-height: 150%;
 }
 
-.toursim-card-container{
-    border: 1px solid orange;
+.tourism-card{
+    max-width: 1440px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 64px;;
+
+
 }
+
+.toursim-card-container{
+    font-size: 0;
+    align-self: stretch;
+    
+}
+
+.toursim-card-container{
+    max-width: 413px;
+    width: 100%;
+}
+
+.tourism-card-image{}
+
+.tourism-card-image img{}
+
+.tourism-content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+    padding: 24px;
+    
+    border-radius: 0px 0px 10px 10px;
+    border-right: 1px solid var(--Primay-04, #AAD6FF);
+    border-bottom: 1px solid var(--Primay-04, #AAD6FF);
+    border-left: 1px solid var(--Primay-04, #AAD6FF);
+    background: var(--Base-White, #FFF);
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+
+}
+
+.info-content{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.info-content h5{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.info-content p{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.btn-container{
+    border-radius: 100px;
+    background: var(--Primary-02, #2587E1);
+    display: flex;
+    padding: 8px 12px 8px 24px;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+}
+
+.tourism-ctaBTN{
+    color: var(--Base-White, #FFF);
+    
+}
+
+/* 應該是要hover整個按鈕都可以點擊，目前只有字 */
+.btn-container:hover{
+    background: var(--Primary-00, #2587E1);
+}
+
+
+/* -----------Explore button -------- */
+.explore-btn{
+    display: flex;
+    padding: 16px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 100px;
+    border: 1px solid var(--Primary-00, #002F59);
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.explore-ctaBTN{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    text-decoration: none;
+    color: var(--Gray-800, #252B37);
+}
+
+.explore-ctaBTN:hover{
+    color: var(--Primary-02, #FFF)
+}
+
+.explore-ctaBTN img{
+    color: var(--Gray-800, #252B37);
+    
+}
+
+.faqs-wrapper{
+    max-width: 1440px;
+    width: 100%;
+    padding: 64px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.faqs-title-container{}
+
+.faqs-title-container h2{
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    color: var(--Gray-800, #252B37);
+    text-align: center;
+}
+
+.faqs-tab-container{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.tab-item.active{
+    border-radius: 30px;
+    background: var(--Primary-02, #2587E1);
+    color: var(--Base-White, #FFF);
+    
+
+    /* Shadows/shadow-xs */
+    box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab-items{
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 30px;
+    border: 1px solid var(--Primary-04);
+    background: var(--Base-White, #FFF);
+
+    /* Shadows/shadow-xs */
+    box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+}
+
+.faqs-content-container{
+    display: flex;
+    padding: 24px 40px;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+    border-radius: 10px;
+    border: 1px solid var(--Gray-200, #E9EAEB);
+
+    /* Shadows/shadow-xs */
+    box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+
+
+
+}
+   
+
+.faqs-content-items{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+
+.faqs-content h3{
+    color: var(--Gray-800, #252B37);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+
+.faqs-content-text{
+    color: var(--Gray-500, #717680);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+    margin-top: 24px;
+}
+
+
+.faqs-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+    margin-bottom: 40px;
+}
+
+
+
+/* -------------- News ------------- */
+
+.news-item{
+    display: flex;
+    gap: 40px;
+    padding: 40px 0;
+
+    border-bottom: 1px solid var(--Gray-200, #E9EAEB);
+}
+
+.news-item-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+}
+
+.news-item-title{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.news-tab{
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 20px;
+    background: var(--Primay-05, #E9F5FF);
+    margin-bottom: 16px;
+
+
+}
+
+.news-tab h6{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.news-tab p{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 12px */
+}
+
+.news-item-text{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.news-item-text h3{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    color: var(--Gray-800, #252B37);
+}
+
+.news-item-text p{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--Gray-500, #717680);
+
+    display: -webkit-box; /* Enables the use of line-clamp */
+    -webkit-line-clamp: 5; /* Limits the content to 5 lines */
+    -webkit-box-orient: vertical; /* Specifies vertical orientation for the box */
+    overflow: hidden; /* Hides the overflowing content */
+    text-overflow: ellipsis; /* Adds "..." at the end of the truncated text */
+}
+
+.read-more-btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.read-more-btn:hover{
+    color: var(--Primary-02, #2587E1);
+}
+
+/* ------ download app --------*/
+.download-app-wrapper{
+    display: flex;
+}
+
+.download-app-image{}
+
+.download-app-content-container{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    justify-content: center;
+    
+}
+
+.download-app-title-container{
+}
+
+.download-app-title-container h2{
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    color: var(--Gray-800, #252B37);
+}
+
+
+.download-app-title-container p {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.download-app-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+/* footer */
+
+.footer-wrapper{
+    background: var(--Primary-00, #002F59);
+    display: flex;
+    padding: 64px 60px;
+    flex-direction: column;
+    
+    
+}
+
+.footer-content-top{
+    display: flex;
+    
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    color: var(--Base-White, #FFF);
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logo img {
+}
+
+.logo-text {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.company-info {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.emergency-contact {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.nav-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+
+
