@@ -39,6 +39,8 @@ button {
 
 }
 
+/* --------------------- menu bar ---------------------- */
+
 .header-1{
     position: fixed;
     top: 0;
@@ -134,6 +136,8 @@ button {
     text-decoration: none;
 }
 
+/* --------------------- hero section ---------------------- */
+
 .hero-section{
     position: relative;
     background-image: url('/assets/image/dk/hero-image.png'); 
@@ -200,6 +204,7 @@ button {
     background: var(--Primary-00, #002F59);
 }
 
+/* --------------------- Booking section ---------------------- */
 
 
 .booking-wrapper{
@@ -265,133 +270,263 @@ button {
     
 }
 
-.booking-form{
-    border: 1px solid purple;
-    
-}
-
-.ticket-info-wrapper{
-    background: var(--Primay-05, #E9F5FF);
-    padding: 0 60px;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    border: 1px solid blue;
-    margin-bottom: 40px;
-
-
-}
-
-
-.ticket-info-container{
-    font-size: 0;
-    display: flex;
-    gap: 40px;
-    border: 1px solid green;
-
-}
-
-.ticket-info-card{
-    flex: 0 0 500px;
-    
-}
-
-/* Adjust for very small screens */
-@media (max-width: 480px) {
-    .ticket-info-card {
-        max-width: 100%; /* Full width for very small screens */
-    }
-}
-
-.ticket-info-image img{
-    border-radius: 10px 10px 0px 0px;
+/* Main container */
+.booking-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    margin: 0 auto;
     width: 100%;
-    height: auto;
-    object-fit: cover; 
 }
 
-.ticket-content-container{
-    border-radius: 0px 0px 10px 10px;
+/* Tab buttons */
+.tabs {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding:24px;
-    justify-content: center;
-    background: var(--Base-White, #FFF);
-    
-    
+    margin-top: 24px;
 }
 
-.info-content{
+.tab-button {
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.active-tab {
+    background-color: #2374d5;
+    color: white;
+}
+
+/* Form area */
+.input-field.dropdown {
+    appearance: none;
+    background-image: url('/assets/icon/dk/svg/Menu-Icon/Ant-Menu-Submenu-Arrow-Down.svg'); /* Add custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+}
+
+.form-area {
+    padding: 20px;
+}
+
+/* Row of form elements */
+.form-row {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: stretch; 
+}
+
+/* Single form group */
+.form-group {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    max-width: 200px;
+    flex: 1;
+}
+
+/* Labels above inputs */
+.label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Form inputs */
+.input-field {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown appearance */
+.dropdown {
+    position: relative;
+}
+
+.dropdown:after {
+    content: "▼";
+    font-size: 10px;
+    position: absolute;
+    right: 10px;
+    color: #666;
+}
+
+/* Checkboxes */
+.checkbox-container {
+    display: flex;
+    align-items: center;
     gap: 8px;
+    margin-bottom: 10px;
 }
 
-.info-content h3{
-    font-size: 24px;
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.input-field {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-field.dropdown {
+    appearance: none;
+    background-image: url('/assets/icon/dk/svg/Menu-Icon/Ant-Menu-Submenu-Arrow-Down.svg');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+    min-width: 200px;
+    flex: 1;
+}
+
+/* Search button */
+.search-button {
+    background-color: #2555a5;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* --------------------- ticket information ---------------------- */
+
+.card-wrapper{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+
+.card-list .card-item{
+    list-style: none;
+    border-radius: 10px;
+}
+
+.card-list .card-item .card-link{
+    user-select: none;
+    display: block;  
+    text-decoration: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+    transition: 0.2s ease;
+    padding: 16px;
+    background: var(--Base-White);
+    border-radius: 10px;
+
+}
+
+.card-list .card-item .card-link:active{
+    cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover{
+    border-color: var(--Primary-02);
+}
+
+.card-img{
+    width: 400px;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.tag{
+    font-size: 0.95rem;
     font-style: normal;
     font-weight: 600;
     line-height: 100%;
-    color: var(--Text-Gray800);
-
+    background: var(--Primary-04);
+    color: var(--Gray-800, #252B37);
+    padding: 12px 24px;
+    width: fit-content;
+    border-radius: 50px;
+    margin: 16px 0 18px;
 }
 
-.info-content p{
-    font-size: 20px;
+.card-content{
+    font-size: 1.19rem;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    color: var(--Content-Gray500);
+    width: 400px;
+    color: var(--Gray-500, #717680);
+    
 }
 
-
-
-.info-btn-container{
-    text-align: center;
-}
-
-.ticket-ctaBTN{
-    color: var(--Primary-02);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    text-align: center;
-}
-
-.ticket-ctaBTN:hover{
-    color: var(--Primary-00);
-}
-
-/* Page indicator styles */
-.page-indicator {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 16px;
-    height: 32px;
-}
-
-.indicator {
-    width: 12px;
-    height: 12px;
+.card-list .card-link .CTA{
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
-    background-color: var(--Base-White);
-    border: none;
+    margin: 30px 0 5px;
+    border: 2px solid var(--Primary-02);
+    background: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+
 }
 
-.indicator.active {
-    background-color: var(--Primary-02)
+.card-list .card-link:hover .CTA{
+    color: var(--Base-White);
+    background: var(--Primary-02);
+
 }
-.arrow{
-    height: 32px;
+
+.card-wrapper .swiper-pagination-bullet{
+    width: 13px;
+    height: 13px;
+    opacity: 0.5;
+    color: var(--Primary-02);
 }
+
+.card-wrapper .swiper-pagination-bullet-active{
+    opacity: 1 ;
+}
+
+
+.card-wrapper .swiper-slide-button{
+    color: var(--Primary-02);
+    margin-top: -35px;
+    
+}
+     
+
+
+/* hide the swiper slide on the small devices */
+@media screen and (max-width: 768px) {
+        .card-wrapper {
+            margin: 0 10px 25px;
+        }
+
+
+        .card-wrapper .swiper-slide-button {
+            display: none;
+        }
+}
+
+
+
+/* --------------------- 觀光section ---------------------- */
 
 .tourism-wrapper{
     max-width: 1440px;
@@ -876,6 +1011,7 @@ button {
     display: flex;
     padding: 64px 60px;
     flex-direction: column;
+    width: 100%;
     
     
 }
@@ -973,6 +1109,7 @@ button {
     text-align: center;
     margin-top: 15px;
     font-size: 14px;
+    color: var(--Base-White, #FFF);
 }
 
 

@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRA-mb</title>
     <link rel="stylesheet" href="./css/style.css">
+    <!-- linking swiperJS CSS  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
 
 <div class="wrapper">
+
+        <!--------------------- menu bar ---------------------->
 
     <div class="header-1">
         <img src="/assets/image/dk/logo.png" alt="">
@@ -48,6 +53,8 @@
             </ul>
         </div>
     </div>
+
+        <!--------------------- hero section ---------------------->
     
     <div class="hero-section">
         <div class="hero-section-contentContainer">
@@ -62,6 +69,8 @@
             
         </div>
     </div>
+
+        <!--------------------- Booking section ---------------------->
     
     <div class="booking-wrapper">
         <div class="annoucement-container">
@@ -69,19 +78,17 @@
                 <img src="/assets/icon/dk/svg/bell-03.svg" alt="">
                 <p>服務公告</p>
             </div>
-        
+
             <div class="annoucement-content">
                 <p>
                     配合集集線隧道及邊坡改善工程施工，本公司自113年5月2日起，濁水站至車埕站間路線停駛，改以公路客運接駁並新增公路停靠站【生物多樣性研究所/軍史公園】，敬請見諒！
                 </p>
             </div>
-        
+
         </div>
-    
-    
         
-    
-    
+        
+
         <div class="booking-form">
     
             <div class="tab-container">
@@ -127,130 +134,187 @@
                     
                 
             </div>
+
+            <div class="booking-box">
+                <!-- Tab buttons -->
+                <div class="tabs">
+                    <button class="tab-button active-tab">快速訂票</button>
+                    <button class="tab-button">完整訂票</button>
+                </div>
+                
+                <!-- Form content -->
+                <div class="form-area">
+                    <!-- First row - ticket type and checkboxes -->
+                    <div class="form-row">
+                        <!-- Ticket type dropdown -->
+                        <div class="form-group">
+                            <label for="ticket-type" class="label">票種</label>
+                            <select id="ticket-type" class="input-field dropdown">
+                                <option value="reserved">對號座</option>
+                                <option value="non-reserved">自由座</option>
+                                <option value="business">商務座</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Checkboxes -->
+                        <div class="checkbox-container">
+                            <label>
+                                <input type="checkbox" name="round-trip" value="round-trip">
+                                來回
+                            </label>
+                        </div>
+                        <div class="checkbox-container">
+                            <label>
+                                <input type="checkbox" name="known-train" value="known-train">
+                                已知車次
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Second row - departure and arrival stations -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="departure-station" class="label">出發站</label>
+                            <select id="departure-station" class="input-field dropdown">
+                                <option value="">基隆 - 0900</option>
+                                <option value="">三坑 - 0910</option>
+                                <option value="">八堵 - 0920</option>
+                            </select>
+                        </div>
     
+                        <button class="swtichBTN"><img src="/assets/icon/dk/svg/switch-horizontal-02.svg" alt=""></button>
+    
+                        <div class="form-group">
+                            <label for="arrive-station" class="label">到達站</label>
+                            <select id="arrive-station" class="input-field dropdown">
+                                <option value="">基隆 - 0900</option>
+                                <option value="">三坑 - 0910</option>
+                                <option value="">八堵 - 0920</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" style="display: flex; gap: 10px;">
+                            <select id="arrival-time" name="arrival-time" class="input-field dropdown">
+                                <option value="arrival-time">抵達</option>
+                                <option value="departure-time">離開</option>
+                            </select>
+                            <input type="time" id="arrival-time" name="arrival-time" class="input-field" placeholder="輸入證件號碼">
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- Third row - train type, passenger and ID -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="train-type" class="label">車種</label>
+                        <select id="train-type" class="input-field dropdown">
+                            <option value="">自強號 (3000)</option>
+                            <option value="">太魯閣</option>
+                            <option value="">普悠瑪</option>
+                            <option value="">自強號</option>
+                            <option value="">莒光號</option>
+                            <option value="">復興號</option>
+                            </select>
+                    </div>
+                        
+                    <div class="form-group">
+                        <label for="passenger-type">乘客類型</label>
+                        <select id="passenger-type" name="passenger-type" class="input-field dropdown">
+                            <option value="adult">成人</option>
+                            <option value="child">兒童</option>
+                            <option value="senior">敬老</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                         <label for="passenger-quantity">數量</label>
+                        <input type="number" id="passenger-quantity" name="passenger-quantity" class="input-field" min="1" max="10" value="1">
+                        </div>
+                        
+                    <div class="form-group" style="display: flex; gap: 10px;">
+                        <select id="id-type" name="id-type" class="input-field dropdown">
+                            <option value="id-card">身分證</option>
+                            <option value="passport">護照</option>
+                            <option value="new-ui-no">統一證號</option>
+                            </select>
+                            <input type="text" id="id-number" name="id-number" class="input-field" placeholder="輸入證件號碼">
+                    </div>
+                    
+                            <!-- Search button row -->
+                            <div class="form-row">
+                                <button class="search-button">🔍 查詢車次</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+
+                        <!--------------------- ticket information ---------------------->
+
+                <div class="info-card-container swiper"> 
+                    <div class="card-wrapper">
+                        <ul class="card-list swiper-wrapper">
+                            <!-- card 1 --> 
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="/assets/image/dk/ticket-info-1.png" alt="Card Image" class="card-img">
+                                    <p class="tag">自由座</p>
+                                    <h2 class="card-content">無需劃位，搭乘更彈性，最適合短途與臨時行程。</h2>
+
+                                    <button class="CTA"><img src="/assets/icon/dk/svg/arrow-narrow-right-1.svg" alt=""></button>
+                                </a>   
+                            </li>
+
+                            <!-- card 2 -->
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="/assets/image/dk/ticket-info-2.png" alt="Card Image" class="card-img">
+                                    <p class="tag">VIP騰雲座艙</p>
+                                    <h2 class="card-content">高級座椅 × 專屬服務，為旅程增添尊榮體驗。</h2>
+
+                                    <button class="CTA"><img src="/assets/icon/dk/svg/arrow-narrow-right-1.svg" alt=""></button>
+                                </a>   
+                            </li>
+
+                            <!-- card 3 -->
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="/assets/image/dk/ticket-info-3.png" alt="Card Image" class="card-img">
+                                    <p class="tag">對號座</p>
+                                    <h2 class="card-content">可指定座位，適合中長途旅客，票價經濟實惠。</h2>
+
+                                    <button class="CTA"><img src="/assets/icon/dk/svg/arrow-narrow-right-1.svg" alt=""></button>
+                                </a>   
+                            </li>
+
+                            <!-- card 4 -->
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="/assets/image/dk/ticket-info-4.png" alt="Card Image" class="card-img">
+                                    <p class="tag">兩鐵列車</p>
+                                    <h2 class="card-content">攜車搭車無負擔，結合鐵道與單車的完美旅程。</h2>
+
+                                    <button class="CTA"><img src="/assets/icon/dk/svg/arrow-narrow-right-1.svg" alt=""></button>
+                                </a>   
+                            </li>
+                        </ul>
+
+                        <div class="swiper-pagination"></div> 
+                        <div class="swiper-slide-button swiper-button-prev"></div>
+                        <div class="swiper-slide-button swiper-button-next"></div>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
+
+         
+
 
     </div>
 
-    <div class="ticket-info-wrapper">
-
-        <div class="ticket-info-container">
-    
-            <div class="ticket-info-card">
-                <div class="ticket-info-image">
-                    <img src="/assets/image/dk/ticket-info-1.png" alt="">
-                </div>
-    
-                <div class="ticket-content-container">
-                    <div class="info-content">
-                    <h3>自由座</h3>
-                    <p>無需劃位，搭乘更彈性，最適合短途與臨時行程。</p>
-                    </div>
-                    
-                    <div class="info-btn-container">
-                    <button class="ticket-ctaBTN">查看使用規則與適用列車</button>
-                    </div>
-                     
-                </div>
-            </div>
-
-
-
-            <div class="ticket-info-card">
-                <div class="ticket-info-image">
-                    <img src="/assets/image/dk/ticket-info-1.png" alt="">
-                </div>
-    
-                <div class="ticket-content-container">
-                    <div class="info-content">
-                    <h3>自由座</h3>
-                    <p>無需劃位，搭乘更彈性，最適合短途與臨時行程。</p>
-                    </div>
-                    
-                    <div class="info-btn-container">
-                    <button class="ticket-ctaBTN">查看使用規則與適用列車</button>
-                    </div>
-                     
-                </div>
-            </div>
-
-
-
-            <div class="ticket-info-card">
-                <div class="ticket-info-image">
-                    <img src="/assets/image/dk/ticket-info-1.png" alt="">
-                </div>
-    
-                <div class="ticket-content-container">
-                    <div class="info-content">
-                    <h3>自由座</h3>
-                    <p>無需劃位，搭乘更彈性，最適合短途與臨時行程。</p>
-                    </div>
-                    
-                    <div class="info-btn-container">
-                    <button class="ticket-ctaBTN">查看使用規則與適用列車</button>
-                    </div>
-                     
-                </div>
-            </div>
-
-
-
-            <div class="ticket-info-card">
-                <div class="ticket-info-image">
-                    <img src="/assets/image/dk/ticket-info-1.png" alt="">
-                </div>
-    
-                <div class="ticket-content-container">
-                    <div class="info-content">
-                    <h3>自由座</h3>
-                    <p>無需劃位，搭乘更彈性，最適合短途與臨時行程。</p>
-                    </div>
-                    
-                    <div class="info-btn-container">
-                    <button class="ticket-ctaBTN">查看使用規則與適用列車</button>
-                    </div>
-                     
-                </div>
-            </div>
-
-
-
-
-            <div class="ticket-info-card">
-                <div class="ticket-info-image">
-                    <img src="/assets/image/dk/ticket-info-1.png" alt="">
-                </div>
-    
-                <div class="ticket-content-container">
-                    <div class="info-content">
-                    <h3>自由座</h3>
-                    <p>無需劃位，搭乘更彈性，最適合短途與臨時行程。</p>
-                    </div>
-                    
-                    <div class="info-btn-container">
-                    <button class="ticket-ctaBTN">查看使用規則與適用列車</button>
-                    </div>
-                     
-                </div>
-            </div>
-            
-            
-        </div>
-
-
-        <div class="page-indicator">
-            <a href="" class="arrow"><img src="/assets/icon/dk/svg/chevron-left.svg" alt=""></a>
-            <button class="indicator active"></button>
-            <button class="indicator"></button>
-            <a href="" class="arrow"><img src="/assets/icon/dk/svg/chevron-right(page).svg" alt=""></a>
-        </div>
-        
-    
-    
-    </div>
-
-<!--------------------- 觀光section ---------------------->
+        <!--------------------- 觀光section ---------------------->
 
     <div class="tourism-wrapper">
         <div class="tourism-title-container">
@@ -303,11 +367,11 @@
                         <button class="tourism-ctaBTN">查優惠區域與票價</button>
                         <img src="/assets/icon/dk/svg/arrow-right.svg" alt="">
                         </div>
-                         
+                        
                     </div>
-    
+
                 </div>
-    
+
                 <div class="toursim-card-container">
                     <div class="tourism-card-image">
                         <img src="/assets/image/dk/tourist-ticket-2.png" alt="">
@@ -323,11 +387,11 @@
                         <button class="tourism-ctaBTN">瀏覽本月行程與報名</button>
                         <img src="/assets/icon/dk/svg/arrow-right.svg" alt="">
                         </div>
-                         
+                        
                     </div>
-    
+
                 </div>
-    
+
                 <div class="toursim-card-container">
                     <div class="tourism-card-image">
                         <img src="/assets/image/dk/tourist-ticket-3.png" alt="">
@@ -343,9 +407,9 @@
                         <button class="tourism-ctaBTN">查看票價與購票方式</button>
                         <img src="/assets/icon/dk/svg/arrow-right.svg" alt="">
                         </div>
-                         
+                        
                     </div>
-    
+
                 </div>
 
                 
@@ -356,7 +420,7 @@
         </div>
 
 
-<!--------------------- 精選觀光列車套票 ---------------------->
+        <!--------------------- 精選觀光列車套票 ---------------------->
 
         <div class="tourism-ticket-container">
             <div class="tourism-ticket-title-container">
@@ -380,11 +444,11 @@
                         <button class="tourism-ctaBTN">一覽車廂風格與路線</button>
                         <img src="/assets/icon/dk/svg/arrow-right.svg" alt="">
                         </div>
-                         
+                        
                     </div>
-    
+
                 </div>
-    
+
                 <div class="toursim-card-container">
                     <div class="tourism-card-image">
                         <img src="/assets/image/dk/Train-ticket-2.png" alt="">
@@ -400,11 +464,11 @@
                         <button class="tourism-ctaBTN">搭上復古列車看海去</button>
                         <img src="/assets/icon/dk/svg/arrow-right.svg" alt="">
                         </div>
-                         
+                        
                     </div>
-    
+
                 </div>
-    
+
                 <div class="toursim-card-container">
                     <div class="tourism-card-image">
                         <img src="/assets/image/dk/Train-ticket-3.png" alt="">
@@ -420,9 +484,9 @@
                         <button class="tourism-ctaBTN">瀏覽經典行程與報名辦法</button>
                         <img src="/assets/icon/dk/svg/arrow-right.svg" alt="">
                         </div>
-                         
+                        
                     </div>
-    
+
                 </div>
 
                 
@@ -431,15 +495,16 @@
             
 
         </div>
-<!----------------- Explore more button  ------------------>
+        <!----------------- Explore more button  ------------------>
         <div class="explore-btn">
             <a href="" class="explore-ctaBTN">探索更多旅遊票券</a>
             <img src="/assets/icon/dk/svg/arrow-narrow-right-1.svg" alt="">
         </div>
 
+    </div>
 
-<!--------------------- FAQs ---------------------->
-<div class="faqs-wrapper">
+    <!--------------------- FAQs ---------------------->
+    <div class="faqs-wrapper">
     <div class="faqs-title-container">
         <h2>常見問題</h2>
     </div>
@@ -460,18 +525,18 @@
         <div class="faqs-content-container">
             <div class="faqs-content-items">
                 <button class="icon"><img src="/assets/icon/dk/svg/minus-circle.svg" alt=""></button>
-    
+
                 <div class="faqs-content active">
                     <h3>網路訂不到，現場購票卻有?</h3>
-    
+
                     <div class="faqs-content-text">
                         <p>本公司採網路連線售票，故列車之可售座位數會因旅客退、換票而隨時變動，可售座位資訊會即時反映至車站、官網及「台鐵e訂通」App...等購票通路，並根據實際售票及退、換票情形進行更新。因此，現場購票時如有因旅客退票或取消訂票所釋出的車票時，則會有該情形。</p>
                     </div>
                 </div>
-    
+
                 
             </div>
-    
+
         </div>
 
 
@@ -479,26 +544,26 @@
         <div class="faqs-content-container">
             <div class="faqs-content-items">
                 <button class="icon"><img src="/assets/icon/dk/svg/plus-circle.svg" alt=""></button>
-    
+
                 <div class="faqs-content">
                     <h3>訂票成功後，是否必須使用「網路信用卡付款購票」系統刷卡購票？</h3>
                 </div>
-    
+
             </div>
-    
+
         </div>
 
 
         <div class="faqs-content-container">
             <div class="faqs-content-items">
                 <button class="icon"><img src="/assets/icon/dk/svg/plus-circle.svg" alt=""></button>
-    
+
                 <div class="faqs-content">
                     <h3>遺忘攜帶乘車票怎麼辦?</h3>
                 </div>
-    
+
             </div>
-    
+
         </div>
 
 
@@ -506,13 +571,13 @@
         <div class="faqs-content-container">
             <div class="faqs-content-items">
                 <button class="icon"><img src="/assets/icon/dk/svg/plus-circle.svg" alt=""></button>
-    
+
                 <div class="faqs-content">
                     <h3>是不是任何班次都可以訂票訂便當？</h3>
                 </div>
-    
+
             </div>
-    
+
         </div>
 
 
@@ -520,13 +585,13 @@
         <div class="faqs-content-container">
             <div class="faqs-content-items">
                 <button class="icon"><img src="/assets/icon/dk/svg/plus-circle.svg" alt=""></button>
-    
+
                 <div class="faqs-content">
                     <h3>我使用網路訂票預訂便當後，已經網路付款，取票時才想要更改電子發票統一編號，要如何辦理？</h3>
                 </div>
-    
+
             </div>
-    
+
         </div>
 
     </div>
@@ -536,14 +601,14 @@
         <a href="" class="explore-ctaBTN">更多常見問題</a>
         <img src="/assets/icon/dk/svg/arrow-narrow-right-1.svg" alt="">
     </div>
-    
-
-</div>
 
 
+    </div>
 
-<!--------------------- News ---------------------->
-<div class="faqs-wrapper">
+
+
+    <!--------------------- News ---------------------->
+    <div class="faqs-wrapper">
     <div class="faqs-title-container">
         <h2>最新公告</h2>
     </div>
@@ -751,7 +816,7 @@
                 <h2>下載「台鐵e訂通」App</h2>
                 <p>查時刻、訂車票、掌握最新列車動態，通通一手搞定。</p>
             </div>
-    
+
             <div class="download-app-btn-container">
                 <button class="download-app-btn"><img src="/assets/image/dk/Badges-apple.svg" alt=""><img src="/assets/image/dk/Badges-google.svg" alt=""></button>
                 
@@ -761,10 +826,10 @@
 
     </div>
 
-</div>
+    </div>
 
     <!--------------------- Footer ---------------------->
-<div class="footer-wrapper">
+    <div class="footer-wrapper">
     <div class="footer-content-top">
 
         <div class="logo-container">
@@ -837,10 +902,16 @@
         </div>
     </div>
 
+    </div>
+
+
+
 </div>
-    
+<!-- linking SwiperJS script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
+    <!-- linking custom script -->
+<script src="/js/script.js"></script>
     
 </body>
 </html>
