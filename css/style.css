@@ -41,47 +41,76 @@ button {
 
 /* --------------------- menu bar ---------------------- */
 
-.header-1{
+/* Main menu styles */
+.header-1 {
     position: fixed;
     top: 0;
     left: 0;
-    max-width:1440px;
-    width: 100%;
-    z-index: 1001;
-    background: var(--Primary-00);
+    z-index: 1000;
     display: flex;
+    max-width: 1440px;
+    width: 100%;
     height: 80px;
-    padding: 8px 24px;
-    justify-content: space-between;
+    background: var(--Primary-00);
+    justify-content: flex-end;
     align-items: center;
-    align-self: stretch;
-        
+    padding: 0 24px;
 }
 
-.company-menu ul{
+
+.main-menu {
     display: flex;
-    padding: 20px 24px;
-    justify-content: center;
-    align-items: center;
-    color: var(--Base-White);
-    list-style: none;
+    gap: 20px;
+    margin: 0 48px 0 200px;
     
 }
 
-.company-menu ul li{
-    padding: 0 20px;
+.menu-item {
+    position: relative; /* Required for positioning the sub-menu */
+    color: var(--Base-White, #FFF);
+    list-style: none;
 }
 
-.company-menu ul li a{
-    color: var(--Base-White);
+.menu-item a {
     text-decoration: none;
+    color: var(--Base-White, #FFF);
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+/* Sub-menu styles */
+.sub-menu {
+    display: none; /* Hide sub-menu by default */
+    position: absolute;
+    top: 100%; /* Position below the parent menu item */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* border-radius: 5px; */
+    /* padding: 10px 0; */
+    z-index: 1000;
+    list-style: none;
+    min-width: 150px;
+}
+
+.sub-menu li a {
+    text-decoration: none;
+    color: var(--Gray-800, #252B37);
+    display: block;
+}
+
+.sub-menu li a:hover {
+    background-color: var(--Primary-01);
+    color: var(--Base-White);
+}
+
+/* Show sub-menu on hover */
+.menu-item:hover .sub-menu {
+    display: block;
 }
 
 .language{
     display: flex;
-    padding: 20px 24px;
-    align-items: center;
-    gap: 24px;
 }
 
 .language ul{
@@ -100,41 +129,81 @@ button {
 
 }
 
-.header-2{
+/* header-2 */
+
+/* Main menu styles */
+.header-2 {
     position: fixed;
     top: 80px;
     left: 0;
+    z-index: 999;
+    display: flex;
     max-width: 1440px;
     width: 100%;
-    z-index: 1000;
-    display: flex;
     height: 80px;
-    padding: 24px;
-    background: var(--Base-White, #FFF);
+    background: var(--Base-White);
     justify-content: center;
     align-items: center;
-    align-self: stretch;
+    padding: 0 24px;
     border-bottom: 1px solid var(--Primay-05, #E9F5FF);
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
     backdrop-filter: blur(2.5px);
 }
 
-.user-menu ul{
-    display: flex;
-    height: 80px;
-    padding: 24px;
-    justify-content: center;
-    align-items: center;
-    align-self: stretch;
-    list-style: none;
-    gap: 24px;
-    }
 
-.user-menu ul li a{
-    color: var(--Text-Gray800);
-    text-decoration: none;
+.main-menu2 {
+    display: flex;
+    gap: 20px;
+    margin: 0 48px 0 200px;
+    
 }
+
+.menu-item2 {
+    position: relative; /* Required for positioning the sub-menu */
+    color: var(--Primary-00);
+    list-style: none;
+}
+
+.menu-item2 a {
+    text-decoration: none;
+    color: var(--Primary-00);
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+/* Sub-menu styles */
+.sub-menu2 {
+    display: none; /* Hide sub-menu by default */
+    position: absolute;
+    top: 100%; /* Position below the parent menu item */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* border-radius: 5px; */
+    /* padding: 10px 0; */
+    z-index: 1000;
+    list-style: none;
+    min-width: 150px;
+}
+
+.sub-menu2 li a {
+    text-decoration: none;
+    color: var(--Text-Gray800);
+    display: block;
+}
+
+.sub-menu2 li a:hover {
+    background-color: var(--Primary-01);
+    color: var(--Base-White);
+}
+
+/* Show sub-menu on hover */
+.menu-item2:hover .sub-menu2 {
+    display: block;
+}
+
+
 
 /* --------------------- hero section ---------------------- */
 
