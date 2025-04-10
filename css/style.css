@@ -209,7 +209,7 @@ button {
 
 .hero-section{
     position: relative;
-    background-image: url('/assets/image/dk/hero-image.png'); 
+    background-image: url('../assets/image/dk/hero-image.png'); 
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat; 
@@ -632,7 +632,7 @@ input[type="checkbox"] {
 
 .tourism-carousel{
     width: 100%;
-    background-image: url('/assets/image/dk/carousel.png');
+    background-image: url('../assets/image/dk/carousel.png');
     height: 585px;
     background-size: cover;
     background-position: center; 
