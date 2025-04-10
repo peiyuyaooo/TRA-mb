@@ -376,6 +376,7 @@ button {
 
 .form-area {
     padding: 20px;
+    margin-bottom: 64px;
 }
 
 /* Row of form elements */
@@ -474,14 +475,14 @@ input[type="checkbox"] {
 
 /* --------------------- ticket information ---------------------- */
 
-.card-wrapper{
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+
+.info-card-container{
+    width: 100%;
     max-width: 1440px;
-    margin: 0 60px 35px;
-    padding: 20px 10px;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative; /* Required for absolute positioning of pagination */
     overflow: hidden;
 }
 
@@ -513,7 +514,7 @@ input[type="checkbox"] {
 }
 
 .card-img{
-    width: 400px;
+    width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: 10px;
     object-fit: cover;
@@ -537,7 +538,7 @@ input[type="checkbox"] {
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    width: 400px;
+    width: 100%;
     color: var(--Gray-500, #717680);
     
 }
@@ -561,19 +562,21 @@ input[type="checkbox"] {
 
 }
 
-.card-wrapper .swiper-pagination-bullet{
+
+
+.info-card-container .swiper-pagination-bullet{
     width: 13px;
     height: 13px;
     opacity: 0.5;
     color: var(--Primary-02);
 }
 
-.card-wrapper .swiper-pagination-bullet-active{
+.info-card-container .swiper-pagination-bullet-active{
     opacity: 1 ;
 }
 
 
-.card-wrapper .swiper-slide-button{
+.info-card-container .swiper-slide-button{
     color: var(--Primary-02);
     margin-top: -35px;
     
@@ -581,17 +584,23 @@ input[type="checkbox"] {
      
 
 
+
+
 /* hide the swiper slide on the small devices */
 @media screen and (max-width: 768px) {
-        .card-wrapper {
+        .info-card-container {
             margin: 0 10px 25px;
         }
 
 
-        .card-wrapper .swiper-slide-button {
+        .info-card-container .swiper-slide-button {
             display: none;
         }
 }
+
+
+
+
 
 
 
