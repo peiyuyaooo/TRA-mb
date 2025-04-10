@@ -864,20 +864,18 @@ input[type="checkbox"] {
     align-self: stretch;
 }
 
-.tab-item.active{
-    border-radius: 30px;
-    background: var(--Primary-02, #2587E1);
-    color: var(--Base-White, #FFF);
-    
-
-    /* Shadows/shadow-xs */
-    box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
-    display: flex;
-    padding: 12px 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+.tab-item.active {
+    background-color: var(--Primary-02); 
+    color: var(--Base-White, #FFF); 
+    border-radius: 30px; 
+    padding: 12px 24px; 
+    text-decoration: none; 
 }
+
+.tab-item.active a {
+    color: var(--Base-White, #FFF); /* Ensure the link text inherits the active color */
+}
+
 
 .tab-items{
     display: flex;
@@ -891,6 +889,21 @@ input[type="checkbox"] {
 
     /* Shadows/shadow-xs */
     box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+}
+
+
+.tab-items a{
+    text-decoration: none;
+    color: var(--Gray-800, #252B37);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.tab-items:hover{
+    background: var(--Primary-04, #AAD6FF);
+    color: var(--Gray-800, #252B37);
 }
 
 .faqs-content-container{
