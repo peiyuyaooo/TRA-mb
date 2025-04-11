@@ -5,6 +5,8 @@
     font-family: 'PingFang SC', sans-serif;
 }
 
+
+
 :root {
     --Primary-00: #002F59;
     --Primary-01: #00529D; 
@@ -29,13 +31,17 @@ button {
 
 
 /* ---------Content---------- */
+
+body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
 .wrapper{
-    display: flex;
     max-width: 1440px;
-    width: auto;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto;
+
 
 }
 
@@ -215,6 +221,89 @@ button {
 }
 
 
+/* --------- adapting to RWD ------------- */
+
+@media screen and (max-width: 1024px) {
+    .header-1, .header-2 {
+        padding: 0 16px;
+    }
+
+    .main-menu, .main-menu2 {
+        margin: 0 24px;
+        gap: 12px;
+    }
+
+    .menu-item a, .menu-item2 a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .header-menu-bar {
+        gap: 16px;
+    }
+
+    .language i, .header-menu-bar i {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-1, .header-2 {
+        height: 60px;
+        padding: 0 12px;
+        justify-content: space-between;
+    }
+
+    .header-1 img {
+        width: 100px; /* Reduce logo size */
+    }
+
+    .main-menu, .main-menu2 {
+        display: none; /* Hide menus */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--Primary-00);
+        flex-direction: column;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .main-menu.active, .main-menu2.active {
+        display: flex; /* Show when toggled */
+    }
+
+    .menu-item, .menu-item2 {
+        width: 100%;
+    }
+
+    .menu-item a, .menu-item2 a {
+        padding: 12px;
+        font-size: 16px;
+        color: var(--Base-White);
+    }
+
+    .sub-menu, .sub-menu2 {
+        position: static;
+        width: 100%;
+        background: var(--Primary-05);
+        box-shadow: none;
+    }
+
+    .header-menu-bar {
+        gap: 12px;
+    }
+
+    /* Hamburger icon (add this to HTML and style) */
+    .hamburger {
+        display: block;
+        font-size: 24px;
+        color: var(--Base-White);
+        cursor: pointer;
+    }
+}
+
 
 /* --------------------- hero section ---------------------- */
 
@@ -282,6 +371,66 @@ button {
 
 .CTA-btn:hover{
     background: var(--Primary-00, #002F59);
+}
+
+/* ---------adapting to RWD ----------- */
+@media screen and (max-width: 1024px) {
+    .hero-section {
+        height: 400px;
+        margin-top: 140px; /* Adjust for smaller headers */
+    }
+
+    .hero-section-contentContainer {
+        top: 10%;
+        left: 4%;
+        gap: 60px;
+    }
+
+    .hero-section-content h1 {
+        font-size: 36px;
+        line-height: 140%;
+    }
+
+    .hero-section-content p {
+        font-size: 20px;
+    }
+
+    .CTA-btn {
+        padding: 6px 20px;
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .hero-section {
+        height: 300px;
+        margin-top: 120px;
+        background-position: top center;
+    }
+
+    .hero-section-contentContainer {
+        top: 5%;
+        left: 5%;
+        right: 5%;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-section-content h1 {
+        font-size: 24px;
+        line-height: 130%;
+    }
+
+    .hero-section-content p {
+        font-size: 16px;
+    }
+
+    .CTA-btn {
+        padding: 6px 16px;
+        font-size: 14px;
+    }
 }
 
 
@@ -492,6 +641,162 @@ input[type="checkbox"] {
 
 .search-button:hover {
     background-color: var(--Primary-00);
+}
+
+
+/* ---------adapting to RWD ----------- */
+
+@media screen and (max-width: 1024px) {
+    .booking-wrapper {
+        padding: 48px 40px;
+    }
+
+    .annoucement-container {
+        padding: 12px;
+    }
+
+    .annoucement-title img {
+        width: 24px;
+    }
+
+    .annoucement-content p {
+        font-size: 14px;
+    }
+
+    .tab-container {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .tab-item a {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .booking-box {
+        padding: 16px;
+    }
+
+    .form-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .form-group {
+        max-width: 160px;
+        min-width: 140px;
+    }
+
+    .input-field {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .search-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .info-card-container .card-item {
+        padding: 12px;
+    }
+
+    .card-content {
+        font-size: 1rem;
+    }
+
+    .tag {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .booking-wrapper {
+        padding: 32px 20px;
+    }
+
+    .annoucement-container {
+        padding: 10px;
+    }
+
+    .annoucement-title img {
+        width: 20px;
+    }
+
+    .annoucement-content p {
+        font-size: 12px;
+    }
+
+    .tab-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tab-item a {
+        width: 100%;
+        text-align: center;
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .booking-box {
+        padding: 12px;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab-button {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .form-group {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .input-field {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .search-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .info-card-container .swiper-slide-button {
+        display: none; /* Already in your CSS */
+    }
+
+    .info-card-container .card-item {
+        padding: 10px;
+    }
+
+    .card-img {
+        aspect-ratio: 4 / 3; /* Adjust for smaller screens */
+    }
+
+    .card-content {
+        font-size: 0.9rem;
+    }
+
+    .tag {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
 }
 
 
@@ -829,9 +1134,142 @@ input[type="checkbox"] {
     border: 1px solid var(--Base-White, #FFF);
 }
 
+/* ------ adapting to RWD --------- */
+@media screen and (max-width: 1024px) {
+    .tourism-wrapper {
+        padding: 0 40px;
+    }
+
+    .tourism-title-container {
+        padding: 48px 40px;
+    }
+
+    .tourism-title {
+        font-size: 32px;
+        line-height: 180%;
+    }
+
+    .tourism-text {
+        font-size: 20px;
+    }
+
+    .tourism-swiper {
+        height: 400px;
+    }
+
+    .tourism-ticket-container {
+        padding: 0 40px;
+    }
+
+    .tourism-ticket-title-container h4 {
+        font-size: 28px;
+    }
+
+    .tourism-ticket-title-container p {
+        font-size: 18px;
+    }
+
+    .tourism-card {
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+    }
+
+    .toursim-card-container {
+        max-width: 300px;
+    }
+
+    .tourism-content-container {
+        padding: 16px;
+    }
+
+    .info-content h5 {
+        font-size: 20px;
+    }
+
+    .info-content p {
+        font-size: 16px;
+    }
+
+    .tourism-ctaBTN {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tourism-wrapper {
+        padding: 0 20px;
+    }
+
+    .tourism-title-container {
+        padding: 32px 20px;
+    }
+
+    .tourism-title {
+        font-size: 24px;
+        line-height: 160%;
+    }
+
+    .tourism-text {
+        font-size: 16px;
+    }
+
+    .tourism-swiper {
+        height: 300px;
+    }
+
+    .tourism.swiper-slide {
+        font-size: 48px;
+    }
+
+    .tourism-ticket-container {
+        padding: 0 20px;
+    }
+
+    .tourism-ticket-title-container h4 {
+        font-size: 24px;
+    }
+
+    .tourism-ticket-title-container p {
+        font-size: 16px;
+    }
+
+    .tourism-card {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .toursim-card-container {
+        max-width: 100%;
+    }
+
+    .tourism-content-container {
+        padding: 12px;
+    }
+
+    .info-content h5 {
+        font-size: 18px;
+    }
+
+    .info-content p {
+        font-size: 14px;
+    }
+
+    .tourism-ctaBTN {
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+
+    .exploreBTN {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+}
 
 
 
+/* ---------faqs----------- */
 .faqs-wrapper{
     max-width: 1440px;
     width: 100%;
@@ -841,8 +1279,6 @@ input[type="checkbox"] {
     gap: 24px;
     align-items: center;
 }
-
-.faqs-title-container{}
 
 .faqs-title-container h2{
     font-size: 48px;
@@ -912,8 +1348,6 @@ input[type="checkbox"] {
     /* Shadows/shadow-xs */
     box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
 
-
-
 }
    
 
@@ -953,6 +1387,8 @@ input[type="checkbox"] {
     align-self: stretch;
     margin-bottom: 40px;
 }
+
+
 
 
 
@@ -1037,6 +1473,122 @@ input[type="checkbox"] {
     color: var(--Primary-02, #2587E1);
 }
 
+
+
+
+/* ---------adapting to RWD--------- */
+@media screen and (max-width: 1024px) {
+    .faqs-wrapper, .news-wrapper {
+        padding: 48px 40px;
+    }
+
+    .faqs-title-container h2, .news-wrapper h2 {
+        font-size: 36px;
+    }
+
+    .faqs-tab-container {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .tab-items {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .faqs-content-container {
+        padding: 16px 24px;
+    }
+
+    .faqs-content h3 {
+        font-size: 18px;
+    }
+
+    .faqs-content-text p {
+        font-size: 14px;
+    }
+
+    .news-item {
+        margin: 48px 0;
+        flex-direction: column;
+    }
+
+    .news-item-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .news-item-content {
+        padding: 0 16px;
+    }
+
+    .news-item-text h3 {
+        font-size: 20px;
+    }
+
+    .news-item-text p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .faqs-wrapper, .news-wrapper {
+        padding: 32px 20px;
+    }
+
+    .faqs-title-container h2, .news-wrapper h2 {
+        font-size: 28px;
+    }
+
+    .faqs-tab-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tab-items {
+        width: 100%;
+        text-align: center;
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .faqs-content-container {
+        padding: 12px 16px;
+    }
+
+    .faqs-content h3 {
+        font-size: 16px;
+    }
+
+    .faqs-content-text p {
+        font-size: 13px;
+    }
+
+    .news-item {
+        margin: 32px 0;
+    }
+
+    .news-item-content {
+        padding: 0 12px;
+    }
+
+    .news-item-text h3 {
+        font-size: 18px;
+    }
+
+    .news-item-text p {
+        font-size: 13px;
+        -webkit-line-clamp: 3;
+    }
+
+    .read-more {
+        font-size: 13px;
+    }
+}
+
+
+
+
 /* ------ download app --------*/
 .download-app-wrapper{
     display: flex;
@@ -1044,7 +1596,6 @@ input[type="checkbox"] {
     margin: 60px 60px;
 }
 
-.download-app-image{}
 
 .download-app-content-container{
     display: flex;
@@ -1054,8 +1605,6 @@ input[type="checkbox"] {
     
 }
 
-.download-app-title-container{
-}
 
 .download-app-title-container h2{
     font-size: 48px;
@@ -1079,6 +1628,8 @@ input[type="checkbox"] {
     gap: 16px;
 }
 
+
+
 /* footer */
 
 .footer-wrapper{
@@ -1087,8 +1638,6 @@ input[type="checkbox"] {
     padding: 64px 60px;
     flex-direction: column;
     width: 100%;
-    
-    
 }
 
 .footer-content-top{
@@ -1109,8 +1658,6 @@ input[type="checkbox"] {
     margin-bottom: 15px;
 }
 
-.logo img {
-}
 
 .logo-text {
     font-size: 18px;
@@ -1188,4 +1735,132 @@ input[type="checkbox"] {
 }
 
 
+/* ---------adapting to RWD--------- */
+@media screen and (max-width: 1024px) {
+    .download-app-wrapper {
+        margin: 48px 40px;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .download-app-image img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .download-app-title-container h2 {
+        font-size: 36px;
+    }
+
+    .download-app-title-container p {
+        font-size: 20px;
+    }
+
+    .download-app-btn img {
+        width: 120px;
+    }
+
+    .footer-wrapper {
+        padding: 48px 40px;
+    }
+
+    .nav-container {
+        width: 70%;
+    }
+
+    .nav-title {
+        font-size: 16px;
+    }
+
+    .nav-link {
+        font-size: 13px;
+    }
+
+    .footer-link {
+        font-size: 13px;
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .download-app-wrapper {
+        margin: 32px 20px;
+        flex-direction: column;
+    }
+
+    .download-app-image img {
+        max-width: 300px;
+    }
+
+    .download-app-title-container h2 {
+        font-size: 28px;
+    }
+
+    .download-app-title-container p {
+        font-size: 16px;
+    }
+
+    .download-app-btn {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .download-app-btn img {
+        width: 100px;
+    }
+
+    .footer-wrapper {
+        padding: 32px 20px;
+    }
+
+    .footer-content-top {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .logo-container {
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .company-info, .emergency-contact {
+        font-size: 12px;
+    }
+
+    .nav-container {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .nav-column {
+        width: 45%;
+    }
+
+    .nav-title {
+        font-size: 14px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .footer-link {
+        font-size: 12px;
+        margin: 5px 0;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}

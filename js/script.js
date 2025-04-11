@@ -28,3 +28,9 @@
         },
     }
   }); 
+
+
+  document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.main-menu').classList.toggle('active');
+    document.querySelector('.main-menu2').classList.toggle('active');
+});
