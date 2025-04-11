@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRA-mb</title>
     <link rel="stylesheet" href="./css/style.css">
+    <!-- link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- linking swiperJS CSS  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -81,14 +83,14 @@
        
         <div class="header-menu-bar">
             <div class="language">
-                <img src="./assets/icon/dk/svg/globe-03.svg" alt="">
+                <i class="fa-solid fa-globe"></i>
                 <ul>
                     <li>中文</li>
                     <li>English</li>
                 </ul>
             </div>
             
-            <img src="./assets/icon/dk/svg/user-circle.svg" alt="">
+            <i class="fa-solid fa-user"></i>
         </div>
         
     
@@ -176,7 +178,7 @@
             </div>
             
             <a href="" class="CTA-btn">立即了解
-            <img src="./assets/icon/dk/svg/arrow-right.svg" alt="">
+            <i class="fa-solid fa-arrow-right"></i>
             </a>
             
         </div>
@@ -353,7 +355,9 @@
                     
                             <!-- Search button row -->
                             <div class="form-row">
-                                <button class="search-button">🔍 查詢車次</button>
+                                <button class="search-button">
+                                    <i class="fa-solid fa-magnifying-glass"></i>查詢車次
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -372,7 +376,7 @@
                                 <p class="tag">自由座</p>
                                 <h2 class="card-content">無需劃位，搭乘更彈性，最適合短途與臨時行程。</h2>
 
-                                <button class="CTA"><img src="./assets/icon/dk/svg/arrow-narrow-right-1.svg" alt=""></button>
+                                <button class="CTA"><i class="fa-solid fa-arrow-right"></i></button>
                             </a>   
                         </li>
 
@@ -383,7 +387,7 @@
                                 <p class="tag">VIP騰雲座艙</p>
                                 <h2 class="card-content">高級座椅 × 專屬服務，為旅程增添尊榮體驗。</h2>
 
-                                <button class="CTA"><img src="./assets/icon/dk/svg/arrow-narrow-right-1.svg" alt=""></button>
+                                <button class="CTA"><i class="fa-solid fa-arrow-right"></i></button>
                             </a>   
                         </li>
 
@@ -394,7 +398,7 @@
                                 <p class="tag">對號座</p>
                                 <h2 class="card-content">可指定座位，適合中長途旅客，票價經濟實惠。</h2>
 
-                                <button class="CTA"><img src="./assets/icon/dk/svg/arrow-narrow-right-1.svg" alt=""></button>
+                                <button class="CTA"><i class="fa-solid fa-arrow-right"></i></button>
                             </a>   
                         </li>
 
@@ -405,7 +409,7 @@
                                 <p class="tag">兩鐵列車</p>
                                 <h2 class="card-content">攜車搭車無負擔，結合鐵道與單車的完美旅程。</h2>
 
-                                <button class="CTA"><img src="./assets/icon/dk/svg/arrow-narrow-right-1.svg" alt=""></button>
+                                <button class="CTA"><i class="fa-solid fa-arrow-right"></i></button>
                             </a>   
                         </li>
                     </ul>
@@ -433,21 +437,23 @@
             </div>
         </div>
 
-        <div class="tourism-carousel">
-
-            <div class="page-controller">
-                <a href=""><img src="./assets/icon/dk/svg/chevron-left.svg" alt=""></a>
-                <a href=""><img src="./assets/icon/dk/svg/chevron-right(page).svg" alt=""></a>
+    
+            <!-- Slider main container -->
+        <div class="tourism-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="tourism swiper-slide">Slide 1</div>
+            <div class="tourism swiper-slide">Slide 2</div>
+            <div class="tourism swiper-slide">Slide 3</div>
             </div>
 
 
-            <div class="tourism-indicator-container">
-                <button class="tourism-indicator active"></button>
-                <button class="tourism-indicator"></button>
-                <button class="tourism-indicator"></button>
-            </div>
-
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
         </div>
+
 
         <!--------------------- 旅遊票券 ---------------------->
 
@@ -470,8 +476,8 @@
                         </div>
                         
                         <div class="btn-container">
-                        <button class="tourism-ctaBTN">查優惠區域與票價</button>
-                        <img src="./assets/icon/dk/svg/arrow-right.svg" alt="">
+                        <button class="tourism-ctaBTN">查優惠區域與票價<i class="fa-solid fa-arrow-right"></i></button>
+                        
                         </div>
                         
                     </div>
@@ -490,8 +496,7 @@
                         </div>
                         
                         <div class="btn-container">
-                        <button class="tourism-ctaBTN">瀏覽本月行程與報名</button>
-                        <img src="./assets/icon/dk/svg/arrow-right.svg" alt="">
+                        <button class="tourism-ctaBTN">瀏覽本月行程與報名<i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                         
                     </div>
@@ -510,18 +515,13 @@
                         </div>
                         
                         <div class="btn-container">
-                        <button class="tourism-ctaBTN">查看票價與購票方式</button>
-                        <img src="./assets/icon/dk/svg/arrow-right.svg" alt="">
+                        <button class="tourism-ctaBTN">查看票價與購票方式<i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                         
                     </div>
-
                 </div>
 
-                
             </div>
-
-            
 
         </div>
 
@@ -547,8 +547,7 @@
                         </div>
                         
                         <div class="btn-container">
-                        <button class="tourism-ctaBTN">一覽車廂風格與路線</button>
-                        <img src="./assets/icon/dk/svg/arrow-right.svg" alt="">
+                        <button class="tourism-ctaBTN">一覽車廂風格與路線<i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                         
                     </div>
@@ -567,8 +566,7 @@
                         </div>
                         
                         <div class="btn-container">
-                        <button class="tourism-ctaBTN">搭上復古列車看海去</button>
-                        <img src="./assets/icon/dk/svg/arrow-right.svg" alt="">
+                        <button class="tourism-ctaBTN">搭上復古列車看海去<i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                         
                     </div>
@@ -587,8 +585,7 @@
                         </div>
                         
                         <div class="btn-container">
-                        <button class="tourism-ctaBTN">瀏覽經典行程與報名辦法</button>
-                        <img src="./assets/icon/dk/svg/arrow-right.svg" alt="">
+                        <button class="tourism-ctaBTN">瀏覽經典行程與報名辦法<i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                         
                     </div>
@@ -602,10 +599,7 @@
 
         </div>
         <!----------------- Explore more button  ------------------>
-        <div class="explore-btn">
-            <a href="" class="explore-ctaBTN">探索更多旅遊票券</a>
-            <img src="./assets/icon/dk/svg/arrow-narrow-right-1.svg" alt="">
-        </div>
+        <a href="" class="exploreBTN">探索更多旅遊票券<i class="fa-solid fa-arrow-right"></i></a>
 
     </div>
 
@@ -616,14 +610,13 @@
     </div>
 
     <div class="faqs-tab-container">
-        <div class="tab-item active"><a href="">全部類別</a></div>
-        <div class="tab-items"><a href="">列車服務</a></div>
-        <div class="tab-items"><a href="">鐵路便當</a></div>
-        <div class="tab-items"><a href="">鐵路商品</a></div>
-        <div class="tab-items"><a href="">廣告刊登</a></div>
-        <div class="tab-items"><a href="">其他</a></div>
-        <div class="tab-items"><a href="">旅遊</a></div>
-
+        <a href="" class="tab-items active">全部類別</a>
+        <a href="" class="tab-items">列車服務</a>
+        <a href="" class="tab-items">鐵路便當</a>
+        <a href="" class="tab-items">鐵路商品</a>
+        <a href="" class="tab-items">廣告刊登</a>
+        <a href="" class="tab-items">其他</a>
+        <a href="" class="tab-items">旅遊</a>
     </div>
 
     <div class="faqs-content-wrapper">
@@ -700,216 +693,138 @@
 
         </div>
 
-    </div>
-
-    <!----------------- Explore more button  ------------------>
-    <div class="explore-btn">
-        <a href="" class="explore-ctaBTN">更多常見問題</a>
-        <img src="./assets/icon/dk/svg/arrow-narrow-right-1.svg" alt="">
-    </div>
-
+        <a href="" class="exploreBTN">更多常見問題<i class="fa-solid fa-arrow-right"></i></a>
 
     </div>
+
+</div>
+
 
     <!--------------------- News ---------------------->
-    <div class="faqs-wrapper">
+<div class="news-wrapper">
     <div class="faqs-title-container">
         <h2>最新公告</h2>
     </div>
 
     <div class="faqs-tab-container">
-        <div class="tab-item active">全部類別</div>
-        <div class="tab-items">重要消息</div>
-        <div class="tab-items">一般消息</div>
-        <div class="tab-items">商品資訊</div>
-        <div class="tab-items">廣告刊登</div>
-        <div class="tab-items">觀光列車</div>
-
+            <a href="" class="tab-items active">全部類別</a>
+            <a href="" class="tab-items">重要消息</a>
+            <a href="" class="tab-items">一般消息</a>
+            <a href="" class="tab-items">商品資訊</a>
+            <a href="" class="tab-items">廣告刊登</a>
+            <a href="" class="tab-items">觀光列車</a>
     </div>
 
     <div class="news-item-container">
         <div class="news-item">
-            <div class="news-item-image">
-                <img src="./assets/image/dk/news-1.png" alt="">
-            </div>
+            <div class="news-item-image"><img src="./assets/image/dk/news-1.png" alt=""></div>
 
             <div class="news-item-content">
-                <div class="news-item-title">
-                    <div class="news-tab">
-                        <h6>重要消息</h6>
-                    </div>
-
-                    <p>2025/03/21</p>
-
-                </div>
-
-                <div class="news-item-text">
-
-                <h3>臺鐵公司配合2025大甲媽祖遶境活動加開列車疏運</h3>
-                <p>臺鐵公司配合「2025乙巳年大甲媽祖遶境」暨「2025臺中媽祖國際觀光文化節－大甲鎮瀾宮周邊演藝活動」，將於114年4月4、5、13日（3天）加開自強號8列次、區間（快）車26列次，合計34列次；114年4月4、5、12、13日（4天）148列次加掛車廂，海線運能提升近四成以疏運人潮，歡迎民眾多加利用。　　本次加開之自強號列車，訂於114年3月23日（星期日）0時起開放網路、台鐵e訂通、超商及電話語音訂票。相關加開列車車次、時刻即日起可於臺鐵公司官網(網址：http://www.railway.gov.tw)及訂票APP「台鐵e訂通」查詢。　　為便利民眾乘車，建議多使用電子票證乘車，或預先購買回程車票，以節省排隊購票時間。另114年4月4、12、13日（共3天）暫停受理彰化至竹南間海線各站（包含成追線列車之海線區間）兩鐵環保業務（攜車袋折疊式腳踏車除外）。</p>
-
-                </div>
                 
-                <div class="read-more-btn">
-                    <button class="read-more">閱讀更多</button>
-                    <img src="./assets/icon/dk/svg/chevron-down.svg" alt="">
+                <div class="news-item-title">
+                    <h6>重要消息</h6><p>2025/03/21</p>
                 </div>
+        
+                <div class="news-item-text">
+                    <h3>臺鐵公司配合2025大甲媽祖遶境活動加開列車疏運</h3>
+                    <p>臺鐵公司配合「2025乙巳年大甲媽祖遶境」暨「2025臺中媽祖國際觀光文化節－大甲鎮瀾宮周邊演藝活動」，將於114年4月4、5、13日（3天）加開自強號8列次、區間（快）車26列次，合計34列次；114年4月4、5、12、13日（4天）148列次加掛車廂，海線運能提升近四成以疏運人潮，歡迎民眾多加利用。　　本次加開之自強號列車，訂於114年3月23日（星期日）0時起開放網路、台鐵e訂通、超商及電話語音訂票。相關加開列車車次、時刻即日起可於臺鐵公司官網(網址：http://www.railway.gov.tw)及訂票APP「台鐵e訂通」查詢。　　為便利民眾乘車，建議多使用電子票證乘車，或預先購買回程車票，以節省排隊購票時間。另114年4月4、12、13日（共3天）暫停受理彰化至竹南間海線各站（包含成追線列車之海線區間）兩鐵環保業務（攜車袋折疊式腳踏車除外）。</p>
+                </div>
+                    
+                <button class="read-more">閱讀更多<i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
-    </div>
 
 
 
 
-
-    <div class="news-item-container">
         <div class="news-item">
-            <div class="news-item-image">
-                <img src="./assets/image/dk/news-2.png" alt="">
-            </div>
+            <div class="news-item-image"><img src="./assets/image/dk/news-2.png" alt=""></div>
 
             <div class="news-item-content">
-                <div class="news-item-title">
-                    <div class="news-tab">
-                        <h6>重要消息</h6>
-                    </div>
-
-                    <p>2025/03/21</p>
-
-                </div>
-
-                <div class="news-item-text">
-
-                <h3>「高雄車站商業大樓暨車站週邊商業空間遴選出租案」招商說明會圓滿成功</h3>
-                <p>臺鐵公司於114年3月17日(一)舉辦「高雄車站商業大樓暨車站週邊商業空間遴選出租案」招商說明會，會中就本案招商文件重點進行說明，並與業者交流誠信、透明及法遵等反貪誠信議題。另由交通部鐵道局協助引導與會廠商至高雄車站商業大樓及車站週邊商業空間實地參觀，期透過本次招商說明會，讓與會廠商更易於規劃未來經營藍圖及評估投資規模期望，達成臺鐵公司、地方及企業永續發展的三贏局面。當天共有34家各界廠商踴躍參與，招商說明會圓滿成功。　　本案租賃標的物為高雄車站商業大樓暨週邊商業空間，商業大樓建築體為地上10層，車站商業空間分布於車站地上1層至地下3層，租賃範圍之總樓地板面積合計53,777.41平方公尺。　　本案具雙鐵共構優勢，每日約5萬人旅次，又臺鐵公司將車專四、車專五委由高雄市政府後續辦理公辦都更，希透過招商開發有效串聯高雄車站周邊商圈，打造高雄車站城市門戶意象。因此，本案所處地段極具交通便利性、商業機能活絡度及休閒娛樂功能性，透過結合交通運輸、休閒遊憩、娛樂交流等服務，期能引進龐大潛在消費族群，活絡車站周邊商業活動。　　本案自114年3月7日(五)起公告招商，將於同年6月4日(三)下午5時截止收件。如欲瞭解更多招商資訊者，可逕行至臺鐵公司官網招商資訊內招商公告頁面(https://www.railway.gov.tw/tra-tip-web/adr/rent-tender-1)免費下載本案招商文件，敬邀各界踴躍投資。</p>
-
-                </div>
                 
-                <div class="read-more-btn">
-                    <button class="read-more">閱讀更多</button>
-                    <img src="./assets/icon/dk/svg/chevron-down.svg" alt="">
+                <div class="news-item-title">
+                    <h6>重要消息</h6><p>2025/03/21</p>
                 </div>
+        
+                <div class="news-item-text">
+                    <h3>「高雄車站商業大樓暨車站週邊商業空間遴選出租案」招商說明會圓滿成功</h3>
+                    <p>臺鐵公司於114年3月17日(一)舉辦「高雄車站商業大樓暨車站週邊商業空間遴選出租案」招商說明會，會中就本案招商文件重點進行說明，並與業者交流誠信、透明及法遵等反貪誠信議題。另由交通部鐵道局協助引導與會廠商至高雄車站商業大樓及車站週邊商業空間實地參觀，期透過本次招商說明會，讓與會廠商更易於規劃未來經營藍圖及評估投資規模期望，達成臺鐵公司、地方及企業永續發展的三贏局面。當天共有34家各界廠商踴躍參與，招商說明會圓滿成功。　　本案租賃標的物為高雄車站商業大樓暨週邊商業空間，商業大樓建築體為地上10層，車站商業空間分布於車站地上1層至地下3層，租賃範圍之總樓地板面積合計53,777.41平方公尺。　　本案具雙鐵共構優勢，每日約5萬人旅次，又臺鐵公司將車專四、車專五委由高雄市政府後續辦理公辦都更，希透過招商開發有效串聯高雄車站周邊商圈，打造高雄車站城市門戶意象。因此，本案所處地段極具交通便利性、商業機能活絡度及休閒娛樂功能性，透過結合交通運輸、休閒遊憩、娛樂交流等服務，期能引進龐大潛在消費族群，活絡車站周邊商業活動。　　本案自114年3月7日(五)起公告招商，將於同年6月4日(三)下午5時截止收件。如欲瞭解更多招商資訊者，可逕行至臺鐵公司官網招商資訊內招商公告頁面(https://www.railway.gov.tw/tra-tip-web/adr/rent-tender-1)免費下載本案招商文件，敬邀各界踴躍投資。</p>
+                </div>
+                    
+                <button class="read-more">閱讀更多<i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
-    </div>
 
 
 
 
-
-
-    <div class="news-item-container">
         <div class="news-item">
-            <div class="news-item-image">
-                <img src="./assets/image/dk/news-3.png" alt="">
-            </div>
+            <div class="news-item-image"><img src="./assets/image/dk/news-3.png" alt=""></div>
 
             <div class="news-item-content">
-                <div class="news-item-title">
-                    <div class="news-tab">
-                        <h6>重要消息</h6>
-                    </div>
-
-                    <p>2025/03/20</p>
-
-                </div>
-
-                <div class="news-item-text">
-
-                <h3>114年清明連續假期再加開班次疏運旅客</h3>
-                <p>臺鐵公司為因應114年清明連續假期旅運需求，於114年4月3日、6日，於全線再加開EMU 3000型新自強號4列次疏運旅客。　　本次再加開班次訂於114年3月23日0時起同步開放網路、訂票APP「台鐵e訂通」、超商及電話語音訂票。相關加開列車車次、時刻，即日起可於臺鐵公司官網(網址：http://www.railway.gov.tw)及訂票APP「台鐵e訂通」查詢。</p>
-
-                </div>
                 
-                <div class="read-more-btn">
-                    <button class="read-more">閱讀更多</button>
-                    <img src="./assets/icon/dk/svg/chevron-down.svg" alt="">
+                <div class="news-item-title">
+                    <h6>重要消息</h6><p>2025/03/21</p>
                 </div>
+        
+                <div class="news-item-text">
+                    <h3>114年清明連續假期再加開班次疏運旅客</h3>
+                    <p>臺鐵公司為因應114年清明連續假期旅運需求，於114年4月3日、6日，於全線再加開EMU 3000型新自強號4列次疏運旅客。　　本次再加開班次訂於114年3月23日0時起同步開放網路、訂票APP「台鐵e訂通」、超商及電話語音訂票。相關加開列車車次、時刻，即日起可於臺鐵公司官網(網址：http://www.railway.gov.tw)及訂票APP「台鐵e訂通」查詢。</p>
+                </div>
+                    
+                <button class="read-more">閱讀更多<i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
-    </div>
 
 
 
 
-
-    <div class="news-item-container">
         <div class="news-item">
-            <div class="news-item-image">
-                <img src="./assets/image/dk/news-4.png" alt="">
-            </div>
+            <div class="news-item-image"><img src="./assets/image/dk/news-4.png" alt=""></div>
 
             <div class="news-item-content">
-                <div class="news-item-title">
-                    <div class="news-tab">
-                        <h6>重要消息</h6>
-                    </div>
-
-                    <p>2025/03/17</p>
-
-                </div>
-
-                <div class="news-item-text">
-
-                <h3>支線漫遊、地方探索 「柴客暖心鐵道記憶之旅」啟航</h3>
-                <p>為延續推動地方創生理念並活絡地方經濟，臺鐵公司繼內灣竹東踩線團後，今（114）年3月27日再度推出特色支線柴油客車郵輪行程「柴客暖心鐵道記憶之旅」。為體現企業社會責任、關懷長者，臺鐵公司特別邀請板橋榮譽國民之家長者共同參與，重溫鐵道旅遊的美好記憶，並特別規劃敬老票，讓長者也能輕鬆參與這段充滿回憶與情感的旅程。活動全票450元，年滿65歲以上長者可購買敬老票新臺幣350元(含排骨便當1個)。　　本郵輪列車從臺北站出發，停靠猴硐及平溪線十分站，民眾不必轉乘即可抵達十分，這是一場文化探索之旅，讓旅客在搭乘臺鐵火車的過程中，除欣賞沿途美麗風景外，更可深入探索臺灣特方特色文化與歷史。　　以「貓村」聞名的猴硐站，旅客可以在此與可愛的貓咪親密接觸，並深入了解當地的黑金歷史，回顧臺灣早期的礦業發展；十分站則是臺灣傳統放天燈的熱點，旅客不僅能夠親自放天燈，還可以在充滿懷舊氛圍的十分老街中漫遊，品味在地小吃與手工藝品。　　臺鐵公司藉此行程希望透過文化交流與地方創生的理念，推動當地經濟發展，並持續推出更多具在地特色的行程，與地方共同創造繁榮。　　本次活動車票將於114年3月22日至25日，每日上午8時至下午9時於臺北車站14號窗口販售，數量有限，售完為止。</p>
-
-                </div>
                 
-                <div class="read-more-btn">
-                    <button class="read-more">閱讀更多</button>
-                    <img src="./assets/icon/dk/svg/chevron-down.svg" alt="">
+                <div class="news-item-title">
+                    <h6>重要消息</h6><p>2025/03/21</p>
                 </div>
+        
+                <div class="news-item-text">
+                    <h3>支線漫遊、地方探索 「柴客暖心鐵道記憶之旅」啟航</h3>
+                    <p>為延續推動地方創生理念並活絡地方經濟，臺鐵公司繼內灣竹東踩線團後，今（114）年3月27日再度推出特色支線柴油客車郵輪行程「柴客暖心鐵道記憶之旅」。為體現企業社會責任、關懷長者，臺鐵公司特別邀請板橋榮譽國民之家長者共同參與，重溫鐵道旅遊的美好記憶，並特別規劃敬老票，讓長者也能輕鬆參與這段充滿回憶與情感的旅程。活動全票450元，年滿65歲以上長者可購買敬老票新臺幣350元(含排骨便當1個)。　　本郵輪列車從臺北站出發，停靠猴硐及平溪線十分站，民眾不必轉乘即可抵達十分，這是一場文化探索之旅，讓旅客在搭乘臺鐵火車的過程中，除欣賞沿途美麗風景外，更可深入探索臺灣特方特色文化與歷史。　　以「貓村」聞名的猴硐站，旅客可以在此與可愛的貓咪親密接觸，並深入了解當地的黑金歷史，回顧臺灣早期的礦業發展；十分站則是臺灣傳統放天燈的熱點，旅客不僅能夠親自放天燈，還可以在充滿懷舊氛圍的十分老街中漫遊，品味在地小吃與手工藝品。　　臺鐵公司藉此行程希望透過文化交流與地方創生的理念，推動當地經濟發展，並持續推出更多具在地特色的行程，與地方共同創造繁榮。　　本次活動車票將於114年3月22日至25日，每日上午8時至下午9時於臺北車站14號窗口販售，數量有限，售完為止。</p>
+                </div>
+                    
+                <button class="read-more">閱讀更多<i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
-    </div>
 
 
 
 
-
-
-
-    <div class="news-item-container">
         <div class="news-item">
-            <div class="news-item-image">
-                <img src="./assets/image/dk/news-5.png" alt="">
-            </div>
+            <div class="news-item-image"><img src="./assets/image/dk/news-5.png" alt=""></div>
 
             <div class="news-item-content">
-                <div class="news-item-title">
-                    <div class="news-tab">
-                        <h6>重要消息</h6>
-                    </div>
-
-                    <p>2025/03/17</p>
-
-                </div>
-
-                <div class="news-item-text">
-
-                <h3>臺鐵與日本西武控股・西武鐵道締結深厚夥伴關係 共推鐵道文化與觀光發展</h3>
-                <p>今(114)年3月14日臺鐵公司與日本株式會社西武控股・西武鐵道株式會社共同慶祝「總合事業友好協定」與「姊妹鐵路協定」締結10周年。自2015年簽訂合作協定以來，雙邊緊密合作，持續促進臺日雙向觀光交流，並在防災演習與重大災害發生時建立了互助機制，展現強大的夥伴關係。　　回顧這十年，臺鐵與西武集團戮力推動鐵道文化與觀光發展共同舉辦多項活動。2020年，臺鐵分別與西武集團旗下的伊豆箱根鐵道株式會社及近江鐵道株式會社簽署「姊妹車站協定」，深化雙方的合作領域。2024年，臺鐵的鳴日廚房與西武鐵道的「西武 旅行餐廳『52席的至福』」觀光列車締結姊妹車輛協定，成為台灣鐵道史上的一大創舉。　　本次10週年紀念儀式於西武鐵道的西武球場前站盛大舉行，臺鐵副總經理黃振照與西武控股代表取締役會長兼CEO後藤高志共同主持此次盛典。雙方期盼未來能進一步加強鐵道運營技術交流，提升旅客服務品質，並攜手推動觀光列車發展，為兩國創造更多的軌道經濟價值。　　為了慶祝這一重要的里程碑，臺鐵與西武集團精心規劃了一場跨國數位集章活動。活動將於2025年3月21日啟動，持續至2026年2月16日為止，民眾只需完成指定條件，即可兌換精美禮品，並有機會搭乘鳴日廚房觀光列車，親身體驗兩國鐵道文化的深度融合。　　展望未來，臺鐵與西武集團將繼續深化合作，致力於推動更多鐵道觀光活動，並藉由強化災害時的相互支援與人才交流，進一步深化台日兩國之間的友好關係。雙方也將透過多元的活動，推動兩國鐵道文化的發展，為民眾帶來更多的美好體驗。</p>
-
-                </div>
                 
-                <div class="read-more-btn">
-                    <button class="read-more">閱讀更多</button>
-                    <img src="./assets/icon/dk/svg/chevron-down.svg" alt="">
+                <div class="news-item-title">
+                    <h6>重要消息</h6><p>2025/03/21</p>
                 </div>
+        
+                <div class="news-item-text">
+                    <h3>臺鐵與日本西武控股・西武鐵道締結深厚夥伴關係 共推鐵道文化與觀光發展</h3>
+                    <p>今(114)年3月14日臺鐵公司與日本株式會社西武控股・西武鐵道株式會社共同慶祝「總合事業友好協定」與「姊妹鐵路協定」締結10周年。自2015年簽訂合作協定以來，雙邊緊密合作，持續促進臺日雙向觀光交流，並在防災演習與重大災害發生時建立了互助機制，展現強大的夥伴關係。　　回顧這十年，臺鐵與西武集團戮力推動鐵道文化與觀光發展共同舉辦多項活動。2020年，臺鐵分別與西武集團旗下的伊豆箱根鐵道株式會社及近江鐵道株式會社簽署「姊妹車站協定」，深化雙方的合作領域。2024年，臺鐵的鳴日廚房與西武鐵道的「西武 旅行餐廳『52席的至福』」觀光列車締結姊妹車輛協定，成為台灣鐵道史上的一大創舉。　　本次10週年紀念儀式於西武鐵道的西武球場前站盛大舉行，臺鐵副總經理黃振照與西武控股代表取締役會長兼CEO後藤高志共同主持此次盛典。雙方期盼未來能進一步加強鐵道運營技術交流，提升旅客服務品質，並攜手推動觀光列車發展，為兩國創造更多的軌道經濟價值。　　為了慶祝這一重要的里程碑，臺鐵與西武集團精心規劃了一場跨國數位集章活動。活動將於2025年3月21日啟動，持續至2026年2月16日為止，民眾只需完成指定條件，即可兌換精美禮品，並有機會搭乘鳴日廚房觀光列車，親身體驗兩國鐵道文化的深度融合。　　展望未來，臺鐵與西武集團將繼續深化合作，致力於推動更多鐵道觀光活動，並藉由強化災害時的相互支援與人才交流，進一步深化台日兩國之間的友好關係。雙方也將透過多元的活動，推動兩國鐵道文化的發展，為民眾帶來更多的美好體驗。</p>
+                </div>
+                    
+                <button class="read-more">閱讀更多<i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
+
     </div>
 
-    <!----------------- Explore more button  ------------------>
-    <div class="explore-btn">
-        <a href="" class="explore-ctaBTN">閱讀更多</a>
-        <img src="./assets/icon/dk/svg/arrow-narrow-right-1.svg" alt="">
-    </div>
-
+    <a href="" class="exploreBTN">了解更多<i class="fa-solid fa-arrow-right"></i></a>
+</div>
     <!--------------------- Download APP ---------------------->
 
-    <div class="download-app-wrapper">
+<div class="download-app-wrapper">
         <div class="download-app-image">
             <img src="./assets/image/dk/download the app.png" alt="">
         </div>
@@ -925,12 +840,10 @@
                 <button class="download-app-btn"><img src="./assets/image/dk/Badges-apple.svg" alt=""><img src="./assets/image/dk/Badges-google.svg" alt=""></button>
                 
             </div>
-        </div>
-        
+        </div>     
 
-    </div>
+</div>
 
-    </div>
 
     <!--------------------- Footer ---------------------->
     <div class="footer-wrapper">

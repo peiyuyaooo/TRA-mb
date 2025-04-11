@@ -113,6 +113,12 @@ button {
     display: flex;
 }
 
+.language i{
+    color: var(--Base-White);
+    font-size: 20px;
+    margin-right: 8px;
+}
+
 .language ul{
     display: flex;
     color: var(--Base-White);
@@ -127,6 +133,11 @@ button {
     gap: 24px;
     align-self: stretch;
 
+}
+
+.header-menu-bar i{
+    color: var(--Base-White);
+    font-size: 20px;
 }
 
 /* header-2 */
@@ -272,6 +283,9 @@ button {
 .CTA-btn:hover{
     background: var(--Primary-00, #002F59);
 }
+
+
+
 
 /* --------------------- Booking section ---------------------- */
 
@@ -464,14 +478,22 @@ input[type="checkbox"] {
 
 /* Search button */
 .search-button {
-    background-color: #2555a5;
+    display: flex;
+    background-color: var(--Primary-01);
     color: white;
     border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
+    border-radius: 100px;
+    padding: 12px 24px;
     cursor: pointer;
     margin-left: auto;
+    gap: 8px;
+    height: fit-content;
 }
+
+.search-button:hover {
+    background-color: var(--Primary-00);
+}
+
 
 /* --------------------- ticket information ---------------------- */
 
@@ -564,14 +586,14 @@ input[type="checkbox"] {
 
 
 
-.info-card-container .swiper-pagination-bullet{
+.info-card-container.swiper-pagination-bullet{
     width: 13px;
     height: 13px;
     opacity: 0.5;
     color: var(--Primary-02);
 }
 
-.info-card-container .swiper-pagination-bullet-active{
+.info-card-container.swiper-pagination-bullet-active{
     opacity: 1 ;
 }
 
@@ -608,7 +630,9 @@ input[type="checkbox"] {
 
 .tourism-wrapper{
     max-width: 1440px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -638,66 +662,39 @@ input[type="checkbox"] {
     line-height: 150%;
 }
 
+/* tourism carousel */
 
-.tourism-carousel{
+.tourism-swiper{
+    border: 1px solid orange;
+    max-width: 1440px;
     width: 100%;
-    background-image: url('../assets/image/dk/carousel.png');
-    height: 585px;
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;
-    overflow: hidden;
-    position: relative;
-    
-
+    height: 500px;
 }
 
-.tourism-indicator-container{
-    position: absolute;
-    left: 50%;
-    top: 90%;
+.tourism.swiper-slide{
     display: flex;
-    gap: 8px;
-}
-
-.tourism-indicator{
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: var(--Base-White);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.tourism-indicator.active {
-    background-color: var(--Primary-02);
-}
-
-.page-controller{
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin: 290px 24px 0 24px;
-    height: 40px;
-    
+    font-size: 64px;
 }
 
-.page-controller img{
-    border-radius: 100px;
-    background: rgba(255, 255, 255, 0.30);
-    backdrop-filter: blur(2px);
 
-    width: 40px;
-    height: 40px;
-    padding: 4px;
-    gap: 4px;
-    aspect-ratio: 1/1;
-    
+
+
+/* Tourism section */
+.tourism-ticket-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    padding: 0 60px;
 }
 
 .tourism-ticket-title-container{
-    margin: 64px 60px 40px 60px;
+    width: 100%;
+    margin: 24px 0;
 }
 
 .tourism-ticket-title-container h4{
@@ -795,6 +792,8 @@ input[type="checkbox"] {
 }
 
 .tourism-ctaBTN{
+    display: flex;
+    gap: 12px;
     color: var(--Base-White, #FFF);
     
 }
@@ -806,36 +805,32 @@ input[type="checkbox"] {
 
 
 /* -----------Explore button -------- */
-.explore-btn{
-    display: flex;
-    padding: 16px 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    border-radius: 100px;
-    border: 1px solid var(--Primary-00, #002F59);
-    width: fit-content;
-    margin: 0 auto;
-    margin-bottom: 40px;
-}
 
-.explore-ctaBTN{
+.exploreBTN{
+    display: flex;
+    gap: 16px;
+    align-items: center;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
     text-decoration: none;
     color: var(--Gray-800, #252B37);
+    border-radius: 100px;
+    border: 1px solid var(--Primary-00, #002F59);
+    width: fit-content;
+    padding: 12px 24px;
+    justify-items: center;
 }
 
-.explore-ctaBTN:hover{
-    color: var(--Primary-02, #FFF)
+.exploreBTN:hover{
+    background: var(--Primary-00, #002F59);
+    color: var(--Base-White, #FFF);
+    border: 1px solid var(--Base-White, #FFF);
 }
 
-.explore-ctaBTN img{
-    color: var(--Gray-800, #252B37);
-    
-}
+
+
 
 .faqs-wrapper{
     max-width: 1440px;
@@ -844,6 +839,7 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    align-items: center;
 }
 
 .faqs-title-container{}
@@ -864,7 +860,7 @@ input[type="checkbox"] {
     align-self: stretch;
 }
 
-.tab-item.active {
+.tab-items.active {
     background-color: var(--Primary-02); 
     color: var(--Base-White, #FFF); 
     border-radius: 30px; 
@@ -872,13 +868,11 @@ input[type="checkbox"] {
     text-decoration: none; 
 }
 
-.tab-item.active a {
-    color: var(--Base-White, #FFF); /* Ensure the link text inherits the active color */
-}
-
 
 .tab-items{
     display: flex;
+    text-decoration: none;
+    color: var(--Primary-00);
     padding: 12px 24px;
     justify-content: center;
     align-items: center;
@@ -964,70 +958,56 @@ input[type="checkbox"] {
 
 /* -------------- News ------------- */
 
+.news-wrapper{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    gap: 24px;
+    padding: 0 60px;
+    align-items: center;
+    margin: 64px 0;
+}
 .news-item{
     display: flex;
-    gap: 40px;
-    padding: 40px 0;
-
-    border-bottom: 1px solid var(--Gray-200, #E9EAEB);
+    margin: 64px 0;
 }
 
 .news-item-content{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 12px;
-    flex: 1 0 0;
+    gap: 16px;
+    width: 100%;
+    padding: 0 24px;
+    justify-content: start;
+
 }
+
 
 .news-item-title{
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    
-}
-
-.news-tab{
-    display: flex;
-    padding: 12px 24px;
-    justify-content: center;
     align-items: center;
-    gap: 4px;
-    border-radius: 20px;
-    background: var(--Primay-05, #E9F5FF);
-    margin-bottom: 16px;
-
-
 }
 
-.news-tab h6{
-    font-size: 16px;
-    font-style: normal;
+.news-item-title h6{
+    background: var(--Primary-05, #AAD6FF);
+    border-radius: 100px;
+    padding: 8px 16px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 100%;
 }
 
-.news-tab p{
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 12px */
+.news-item-title p{
+    color: var(--Content-Gray500);
 }
 
 .news-item-text{
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+        flex-direction: column;
+        gap: 12px;
 }
 
-.news-item-text h3{
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
-    color: var(--Gray-800, #252B37);
-}
+
 
 .news-item-text p{
     font-size: 16px;
@@ -1041,9 +1021,11 @@ input[type="checkbox"] {
     -webkit-box-orient: vertical; /* Specifies vertical orientation for the box */
     overflow: hidden; /* Hides the overflowing content */
     text-overflow: ellipsis; /* Adds "..." at the end of the truncated text */
+    margin-bottom: revert-layer;
+
 }
 
-.read-more-btn{
+.read-more{
     display: flex;
     align-items: center;
     gap: 8px;
@@ -1051,13 +1033,15 @@ input[type="checkbox"] {
     justify-content: flex-end;
 }
 
-.read-more-btn:hover{
+.read-more:hover{
     color: var(--Primary-02, #2587E1);
 }
 
 /* ------ download app --------*/
 .download-app-wrapper{
     display: flex;
+    width: 100%;
+    margin: 60px 60px;
 }
 
 .download-app-image{}
