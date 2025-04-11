@@ -60,7 +60,6 @@ body {
     background: var(--Primary-00);
     justify-content: flex-end;
     align-items: center;
-    padding: 0 24px;
 }
 
 
@@ -69,6 +68,15 @@ body {
     gap: 20px;
     margin: 0 48px 0 200px;
     
+}
+
+.menu-items{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    align-self: stretch;
+    padding: 0 24px;
 }
 
 .menu-item {
@@ -146,7 +154,7 @@ body {
     font-size: 20px;
 }
 
-/* header-2 */
+/* ----------- header-2 --------- */
 
 /* Main menu styles */
 .header-2 {
@@ -174,6 +182,15 @@ body {
     gap: 20px;
     margin: 0 48px 0 200px;
     
+}
+
+.menu-items2{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    align-self: stretch;
+    padding: 0 24px;
 }
 
 .menu-item2 {
