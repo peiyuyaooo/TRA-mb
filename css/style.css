@@ -922,6 +922,8 @@ input[type="checkbox"] {
 
 
 
+
+
 .info-card-container.swiper-pagination-bullet{
     width: 13px;
     height: 13px;
@@ -1889,4 +1891,18 @@ input[type="checkbox"] {
     .copyright {
         font-size: 12px;
     }
+}
+
+
+
+/* bryan do */
+
+.swiper-pagination {
+
+    bottom: var(--swiper-pagination-bottom, -12px) !important;
+    position: relative !important;
+
+
+    min-height: 30px !important;
+
 }
